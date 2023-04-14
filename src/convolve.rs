@@ -9,9 +9,6 @@ where S: nalgebra::Storage<i32, Dyn, Dyn>
 
     let zero_padded: Matrix<i32, Dyn, Dyn, nalgebra::VecStorage<i32, Dyn, Dyn>> = zero_pad(filter, height, width);
     // let doubly_blocked_toeplitz: Vec<Matrix<i32, Dyn, Dyn, nalgebra::VecStorage<i32, Dyn, Dyn>>> = generate_2d_toeplitz(zero_padded);
-    let toeplitz = generate_1d_toeplitz(zero_padded.row(1).transpose(), image.ncols());
-
-    println!("{}", toeplitz);
 }
 
 fn generate_1d_toeplitz(vector: Matrix<i32, Dyn, Const<1>, nalgebra::VecStorage<i32, Dyn, Const<1>>>, ncols: usize)
