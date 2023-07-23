@@ -1,6 +1,6 @@
 use nalgebra::{base, Dyn, Dim, Const};
-type DynamicMatrix = base::Matrix<i32, Dyn, Dyn, nalgebra::VecStorage<i32, Dyn, Dyn>>;
-type DynamicVector = base::Matrix<i32, Dyn, Const<1>, nalgebra::VecStorage<i32, Dyn, Const<1>>>;
+type DynamicMatrix = base::Matrix<f32, Dyn, Dyn, nalgebra::VecStorage<f32, Dyn, Dyn>>;
+type DynamicVector = base::Matrix<f32, Dyn, Const<1>, nalgebra::VecStorage<f32, Dyn, Const<1>>>;
 type Shape = (Dyn, Dyn);
 
 // 2 dimensional convolution between two two matrices using Toeplitz Matrices
